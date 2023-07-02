@@ -54,6 +54,23 @@ public class practice {
             반전 연산자 ~ 는 "%s\n" 으로 쓰네
 
     조건문 if, switch / swich는 case별로 조건을 붙이는 조건문
+    반복문 for / for(초기치; 조건문; 증가치;){반복하여 실행할 내용;}
+        while / while(조건문) {반복하여 실행할 내용;} 요건 조건 해당시 반복해서 실행한다
+        do while / do {반복하여 실행할 내용;} while (조건문); 요건 일단 한번 반복하고 조건 맞으면 계속 반복한다
+        continue; 는 해당하는 조건시 밑에 내용을 실행하지 않고 그 다음단계로 가게하고
+        break; 는 해당하는 조건시 반복문을 아예 빠져나오게 해서 더 이상 실행하지 않도록 한다
+        for each / for (int 변수 : 반복하고자하는대상) {System.out.println(변수);} 반복하고자하는대상의 데이터를 하나씩 출력
+    System.out.println(); 요거에서 ln 의 역할은 줄을 바꿔주는것!
+    int[] 변수 = {1,2,3,4,5}; 요거는 1차원 배열 /
+    int[][] 변수 = {{1,2,3},{4,5,6}}; 은 다차원 배열 중 2차원 배열 / [행] [열]
+        for each 로 myArray2(2차원 변수)데이터 나열하기 / for(int[] ints : myArray2){ for(int anInt : ints){soutv(anInt);}
+    int[][][] 변수 = {{{1,2},{3,4}},{{5,6},{7,8}}}; 은 다차원 배열 중 3차원 배열 /
+        출력시 for (int[] itemRow: 변수){ for (int itemCol: itemRow){ System.out.print(itemCol + " ");} System.out.println();} 처럼 쓴다
+
+    클래스와 객체 / class는 객체를 만들고 이루어가는 설계도
+    클래스를 만들고 변수 선언(이때 클래스의 특성에 관한 변수를 넣어주고) > 클래스로 생성한 변수 설명해주며 생성자 호출 > 메소드들을 넣고(이때 클래스의 기능에 대한 정보들을 넣어준다) > 클래스를 객체로 만들고 > 출력
+
+
 
 
 
