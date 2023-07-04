@@ -77,10 +77,38 @@ public class practice {
     String 변수를 Int로 변환 / Integer.parseIng(변수);
 
     상속 / class 자식클래스명 extends 부모클래스명 { ~~~~ }
-    super / 부모클래스의 변수 덮어쓰거나 호출할때 사용했어
+    super???? / 부모클래스의 변수 덮어쓰거나 호출할때 사용했어
 
     추상 클래스 abstract / 꼭 구현해야할 기능들을 설정해놔서 상속받으면 그 기능들을 꼭 구현해야된대
         클래스를 상속 받은 이후에 오른쪽마우스 > Generate > Implement Methods... > OK 누르면 자동으로 기능들 채울수 있게 양식을 짜줘
+
+    interface???? / 상속은 extends 라면 요거는 implements
+    추상 클래스 "그린오크", 인터페이스 "NPC"와"User" > 요것들을 extends와 implements해서 > 오크NPC와 오크User를 만든다!
+
+    내부 클래스 (instance/static/local/anonymous class)
+
+    Scanner를 통해서 System.in 하면 사용자한테 입력값을 받아올 수 있나봐
+        System.in.read(new byte[System.in.available()]); 입력값 받은 이후 뒷 단계에 영향이 없으려면 이걸로 남아있는 데이터들을 소진해서 없애줘야한대
+
+    FileWriter, PrintWriter, FileWriter ~~ (~~, apend); / 데이터를 파일에 넣어준다
+        각각 fw.write(memo); , pw.println(memo); 로 데이터를 넣어준다
+    BufferedReader / 파일로부터 데이터를 불러온다
+
+    try{ 예외가 발생할 수도 있는부분; } catch(예외 case1) { 예외 case1이 발생될 시 실행할 부분; } finally { 항상 실행되는 부분; }
+
+    List(ArrayList, LinkedList), Set(HashSet, TreeSet), Map(HashMap, TreeMap) /
+
+    람다식은 Arrowfunction이랑 비슷하게 식을 간결하게 해준다. 여기서는 인터페이스 만들어놓고 불러오면서 출력할때 썼어
+        대신 인터페이스에 변수가 여러개이면 사용이 제한된대
+
+    Stream 도 식을 간결하게 해주네 / 데이터소스객체.Stream생성().중개연산().최종연산(); / 필터링, 모든 데이터에 연산수행, 합, 평균, 최솟값, 최댓값 구할때 사용
+        forEach, Stream.builder().add().~~.build();, Stream.generate( () -> "~~" ).limit(숫자);, Stream.iterate(초기값, n -> n * 2).limit(숫자);
+        IntStream.range(1, 5) 요거 뒤에 이후의 코딩을 붙여준다
+            .filter(n -> n % 2 == 0); 요건 필터링 그리구 .forEach(System.out::println);을 붙이면 출력까지 / .map(n -> n + 1); 요건 연산수행 / .sum(); 요건 합 / .average().getAsDouble(); 요건 평균 / .min.getAsInt(); 요건 최솟값 / 최댓값도 마찬가지
+        Stream 변수 생성 후 / System.out.println(변수.reduce((x, y) -> x + y).get()); 요거는 연쇄적으로 합을 구한 값을 알려줘
+        builder()~~~ 로 변수1을 세팅한 뒤에 IntStream 변수2 = 변수1.sorted() 하면 순서대로 세팅
+
+
 
 
 
